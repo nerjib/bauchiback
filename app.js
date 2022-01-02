@@ -8,6 +8,10 @@ const app = express();
 const multer = require('multer');
 const cloudinary = require('cloudinary');
 
+const BAUPunits = require('./src/controllers/punits')
+const BAUVotes = require('./src/controllers/votes')
+const BAUIncidents = require('./src/controllers/incidents')
+
 
 app.use(cors())
 
@@ -75,6 +79,11 @@ res.json({
     m:'sdg'
 })
 })
+
+app.use('/api/v1/baupunits', BAUPunits)
+app.use('/api/v1/bauresults', BAUVotes)
+app.use('/api/v1/bauincidents', BAUIncidents )
+
 
 // ussd feedback
 
