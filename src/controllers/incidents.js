@@ -3,8 +3,8 @@ const moment = require ('moment')
 const router = express.Router();
 const db = require('../db/index');
 const dotenv = require('dotenv');
-const upload = require('../multer')
-const cloudinary = require('../cloudinary')
+const upload = require('./multer')
+const cloudinary = require('./cloudinary')
 
 
 const updateCardReader = async(cr, ward, puid,lga)=>{
