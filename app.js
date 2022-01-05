@@ -11,6 +11,8 @@ const cloudinary = require('cloudinary');
 const BAUPunits = require('./src/controllers/punits')
 const BAUVotes = require('./src/controllers/votes')
 const BAUIncidents = require('./src/controllers/incidents')
+const iADailyVideo = require('./src/controllers/insideA/dailyvideo')
+
 
 
 app.use(cors())
@@ -83,6 +85,8 @@ res.json({
 app.use('/api/v1/baupunits', BAUPunits)
 app.use('/api/v1/bauresults', BAUVotes)
 app.use('/api/v1/bauincidents', BAUIncidents )
+app.use('/api/v1/dailyvideo', iADailyVideo )
+
 
 
 // ussd feedback
