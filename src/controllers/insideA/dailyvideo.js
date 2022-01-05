@@ -21,7 +21,7 @@ router.post('/', upload.single('file'),  async(req, res) => {
           urls.push(newPath.url)
     
     const createUser = `INSERT INTO
-      bauincidents(title, comments, fileurl, time) VALUES ($1, $2, $3, $4) RETURNING *`;
+      dailyvideo(title, comments, fileurl, time) VALUES ($1, $2, $3, $4) RETURNING *`;
     console.log(req.body)
     const values = [
     req.body.title,
