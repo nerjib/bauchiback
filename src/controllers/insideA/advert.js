@@ -12,7 +12,7 @@ const cloudinary = require('../cloudinary')
 
 
 router.post('/', upload.single('file'),  async(req, res) => {
-    const uploader = async (path) => await cloudinary.uploads(path, 'dailyvideo' ,req.body.title+'_'+(new Date()).getTime());
+    const uploader = async (path) => await cloudinary.uploads(path, 'Advert' ,req.body.title+'_'+req.body.company+'_'+(new Date()).getTime());
 
     if (req.method === 'POST') {
         const urls = []

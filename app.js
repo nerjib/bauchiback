@@ -12,6 +12,7 @@ const BAUPunits = require('./src/controllers/punits')
 const BAUVotes = require('./src/controllers/votes')
 const BAUIncidents = require('./src/controllers/incidents')
 const iADailyVideo = require('./src/controllers/insideA/dailyvideo')
+const iAAdvert = require('./src/controllers/insideA/advert')
 
 
 
@@ -85,7 +86,9 @@ res.json({
 app.use('/api/v1/baupunits', BAUPunits)
 app.use('/api/v1/bauresults', BAUVotes)
 app.use('/api/v1/bauincidents', BAUIncidents )
-app.use('/api/v1/dailyvideo', iADailyVideo )
+app.use('/api/v1/iadailyvideo', iADailyVideo )
+app.use('/api/v1/iaadvert', iAAdvert )
+
 
 
 
